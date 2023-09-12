@@ -11,6 +11,16 @@
 	box-sizing: border-box;
 }
 
+html {
+	--container-background: rgba(0, 0, 0, 4%);
+	--container-gap: 10mm;
+
+	--page-background: rgb(255, 255, 255);
+	--page-foreground: rgb(0, 0, 0);
+	--page-height: 297mm;
+	--page-width: 210mm;
+}
+
 body {
 	margin: 0;
 }
@@ -21,21 +31,41 @@ body {
 
 @media screen {
 	.container {
-		--container-gap: 10mm;
-		--container-margin: 20mm;
-
-		margin: var(--container-margin);
+		padding: var(--container-gap);
 		flex-direction: row;
 		flex-wrap: wrap;
 		gap: var(--container-gap);
+		background-color: var(--container-background);
 	}
 }
 
 .page {
-	--page-height: 297mm;
-	--page-width: 210mm;
-
 	height: var(--page-height);
 	width: var(--page-width);
-	background-color: #00000008;
+	background-color: var(--page-background);
+	color: var(--page-foreground);
+}
+
+.header {
+	padding: 10mm;
+	display: flex;
+	flex-direction: column;
+	background-color: black;
+	color: white;
+}
+
+.header > * {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.logo {
+	height: 20mm;
+	width: 20mm;
+}
+
+.a {
+	display: flex;
+	flex-direction: column;
 }
