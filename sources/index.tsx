@@ -1,5 +1,7 @@
 import { createRoot } from "react-dom/client";
 
+import { Container } from "./Container";
+
 const rootElement = document.getElementById("root");
 if (rootElement === null) {
 	throw new Error("Failed to get the root element.");
@@ -7,4 +9,4 @@ if (rootElement === null) {
 
 const root = createRoot(rootElement);
 
-root.render(<h1>Hello, world</h1>);
+root.render(<Container />);
