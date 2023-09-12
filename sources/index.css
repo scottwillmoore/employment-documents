@@ -1,41 +1,28 @@
+@import "./styles/fonts.css";
+@import "./styles/resets.css";
+@import "./styles/variables.css";
+
 @page {
 	margin: 0;
 	size: A4;
 }
 
-*::before,
-*,
-*::after {
-	border-style: solid;
-	border-width: 0;
-	box-sizing: border-box;
-}
-
 html {
-	--container-background: rgba(0, 0, 0, 4%);
-	--container-gap: 10mm;
-
-	--page-background: rgb(255, 255, 255);
-	--page-foreground: rgb(0, 0, 0);
-	--page-height: 297mm;
-	--page-width: 210mm;
-}
-
-body {
-	margin: 0;
-}
-
-.container {
-	display: flex;
+	font-family: "Mona Sans", sans-serif;
+	font-weight: 400;
 }
 
 @media screen {
+	html {
+		background-color: var(--container-background);
+	}
+
 	.container {
 		padding: var(--container-gap);
+		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
 		gap: var(--container-gap);
-		background-color: var(--container-background);
 	}
 }
 
