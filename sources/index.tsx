@@ -13,5 +13,5 @@ const root = createRoot(rootElement);
 root.render(
 	<Container>
 		<Letter />
-	</Container>
+	</Container>,
 );
