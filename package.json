@@ -3,14 +3,25 @@
 	"private": true,
 	"name": "letters",
 	"scripts": {
-		"start": "parcel ./index.html --cache-dir ./.parcel --dist-dir ./outputs"
+		"check": "run-s check:*",
+		"check:prettier": "prettier --check .",
+		"check:stylelint": "stylelint ./sources/**/*.css",
+		"fix": "run-s check:*",
+		"fix:prettier": "prettier --write .",
+		"fix:stylelint": "stylelint --fix ./sources/**/*.css",
+		"start": "parcel --cache-dir ./.parcel --dist-dir ./outputs ./index.html"
 	},
 	"devDependencies": {
 		"@types/react": "^18.2.21",
 		"@types/react-dom": "^18.2.7",
+		"npm-run-all2": "^6.0.6",
 		"parcel": "^2.9.3",
 		"prettier": "^3.0.2",
-		"process": "^0.11.10",
+		"prettier-plugin-organize-imports": "^3.2.3",
+		"stylelint": "^15.10.3",
+		"stylelint-config-clean-order": "^5.2.0",
+		"stylelint-config-standard": "^34.0.0",
+		"stylelint-order": "^6.0.3",
 		"typescript": "^5.1.6"
 	},
 	"dependencies": {

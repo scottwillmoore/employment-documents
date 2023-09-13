@@ -1,44 +1,30 @@
-@import "./styles/fonts.css";
-@import "./styles/resets.css";
-@import "./styles/variables.css";
+@import url("./styles/fonts.css");
+@import url("./styles/resets.css");
+@import url("./styles/variables.css");
 
 @page {
-	margin: 0;
-	size: A4;
+	size: a4;
 }
 
 html {
 	font-family: "Mona Sans", sans-serif;
 	font-weight: 400;
-}
-
-@media screen {
-	html {
-		background-color: var(--container-background);
-	}
-
-	.container {
-		padding: var(--container-gap);
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		gap: var(--container-gap);
-	}
+	line-height: 1.5;
 }
 
 .page {
-	height: var(--page-height);
 	width: var(--page-width);
-	background-color: var(--page-background);
+	height: var(--page-height);
 	color: var(--page-foreground);
+	background-color: var(--page-background);
 }
 
 .header {
-	padding: 10mm;
 	display: flex;
 	flex-direction: column;
-	background-color: black;
+	padding: 10mm;
 	color: white;
+	background-color: black;
 }
 
 .header > * {
@@ -48,11 +34,31 @@ html {
 }
 
 .logo {
-	height: 20mm;
 	width: 20mm;
+	height: 20mm;
 }
 
 .a {
 	display: flex;
 	flex-direction: column;
+}
+
+@media not print {
+	html {
+		background-color: var(--container-background);
+	}
+
+	.container {
+		display: flex;
+		flex-flow: row wrap;
+		gap: var(--container-gap);
+		padding: var(--container-gap);
+	}
+}
+
+@media print {
+	.container {
+		display: flex;
+		flex-direction: column;
+	}
 }

@@ -1,9 +1,8 @@
-:root {
-	--container-background: hsl(0 0% 95%);
+html {
+	--container-background: hsl(0deg 0% 95%);
 	--container-gap: 10mm;
-
-	--page-background: hsl(0 0% 100%);
-	--page-foreground: hsl(0 0% 0%);
+	--page-background: hsl(0deg 0% 100%);
+	--page-foreground: hsl(0deg 0% 0%);
 	--page-height: 297mm;
 	--page-width: 210mm;
 }
