@@ -1,0 +1,15 @@
+/* View */
+
+.view {
+	display: flex;
+	flex-direction: column;
+}
+
+@media not print {
+	.view {
+		display: flex;
+		flex-flow: row wrap;
+		gap: var(--container-gap);
+		padding: var(--container-gap);
+	}
+}

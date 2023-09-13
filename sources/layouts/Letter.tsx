@@ -6,14 +6,14 @@ import { Page } from "../components/Page";
 export const Header: FunctionComponent = () => {
 	return (
 		<header className="header">
-			<div>
+			<div className="topRow">
 				<Logo />
 				<div className="a">
 					<span className="name">Scott Moore</span>
 					<span className="profession">Software Engineer</span>
 				</div>
 			</div>
-			<ul>
+			<ul className="bottomRow">
 				<li>
 					<div className="icon">I</div>
 					<span>abc</span>
@@ -23,6 +23,7 @@ export const Header: FunctionComponent = () => {
 					<span>abc</span>
 				</li>
 			</ul>
+			<p className="description"></p>
 		</header>
 	);
 };

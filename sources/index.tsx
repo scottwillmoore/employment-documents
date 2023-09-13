@@ -1,6 +1,6 @@
 import { createRoot } from "react-dom/client";
 
-import { Container } from "./components/Container";
+import { View } from "./components/View";
 import { Letter } from "./layouts/Letter";
 
 const rootElement = document.getElementById("root");
@@ -11,7 +11,7 @@ if (rootElement === null) {
 const root = createRoot(rootElement);
 
 root.render(
-	<Container>
+	<View>
 		<Letter />
-	</Container>,
+	</View>,
 );

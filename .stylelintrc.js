@@ -6,6 +6,7 @@ const propertiesOrder = propertyGroups.map((properties) => ({
 	properties,
 }));
 
+/** @type {import("stylelint").Config} */
 module.exports = {
 	extends: ["stylelint-config-clean-order", "stylelint-config-standard"],
 	rules: {
