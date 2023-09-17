@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json.schemastore.org/package",
 	"private": true,
-	"name": "letters",
+	"name": "employment-documents",
 	"scripts": {
 		"build": "vite build",
 		"check": "run-s check:*",

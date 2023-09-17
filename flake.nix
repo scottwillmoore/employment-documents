@@ -1,9 +1,7 @@
 {
   inputs = {
     flake-parts.url = "github:hercules-ci/flake-parts";
-
     nix-packages.url = "github:nixos/nixpkgs/nixpkgs-unstable";
-
     nix-systems.url = "github:nix-systems/default";
   };
   outputs = inputs @ {

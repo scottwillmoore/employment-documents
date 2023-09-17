@@ -1,7 +1,8 @@
 {
 	"recommendations": [
-		"streetsidesoftware.code-spell-checker",
 		"esbenp.prettier-vscode",
+		"mkhl.direnv",
+		"streetsidesoftware.code-spell-checker",
 		"stylelint.vscode-stylelint"
 	]
 }
